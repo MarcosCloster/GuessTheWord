@@ -1,8 +1,11 @@
 <div class="container">
   <h1>Wordle Clone</h1>
   <div class="grid">
-    <div class="row" *ngFor="let intento of intentos">
-      <div class="square" *ngFor="let letra of intento">
+    <div class="row" *ngFor="let intento of intentos; let i = index">
+      <div 
+        class="square" 
+        *ngFor="let letra of intento; let j = index" 
+        [ngClass]="estados[i][j]">
         {{ letra }}
       </div>
     </div>
