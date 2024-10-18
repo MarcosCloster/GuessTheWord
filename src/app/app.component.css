@@ -1,6 +1,9 @@
 .container {
   text-align: center;
-  margin-top: 50px;
+  background-color: #B38D97;
+  border-radius: 20px;
+  width: 35rem;
+  position: relative;
 }
 
 .grid {
@@ -15,8 +18,8 @@
 }
 
 .square {
-  width: 50px;
-  height: 50px;
+  width: 3rem;
+  height: 3rem;
   border: 2px solid black;
   margin: 5px;
   font-size: 24px;
@@ -42,8 +45,63 @@
   color: white;
 }
 
-input {
-  padding: 10px;
-  font-size: 18px;
-  display: none; /* Ocultar el input */
+.result{
+  background-color: #D5ACA9;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  width: 16rem;
+  height: 17rem;
+  border-radius: 5px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  z-index: 10;
+  position: absolute; 
+  transform: translate(-50%, -50%);
+  top: 50%;  
+  left: 50%;
+}
+
+
+.wordResult{
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  width: 6rem;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: none; 
+  font-weight: bold;
+  border: 1px rgb(75, 74, 74) solid;
+  font-size: 30px;
+}
+
+.textResult{
+  margin-bottom: 20px;
+  max-width: 15rem;
+  font-size: 30px;
+}
+
+button{
+  margin-top: 15px;
+  position: relative;
+  border: none;
+  height: 50px;
+  width: 200px;
+  font-size: 22px;
+  transition: .3s linear;
+  cursor: pointer;
+}
+
+.restartButton:hover{
+  background-color: #dd4e5a;
+  box-shadow: 0 0 5px #dd4e5a, 0 0 25px #dd4e5a, 0 0 50px #dd4e5a, 0 0 100px #dd4e5a, 0 0 300px #dd4e5a;
+}
+
+.totalTime{
+  font-size: 17px;
+  display: none;
 }

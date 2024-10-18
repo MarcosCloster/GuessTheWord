@@ -1,14 +1,24 @@
 <div class="container">
-  <h1>Wordle Clone</h1>
   <div class="grid">
-    <div class="row" *ngFor="let intento of intentos; let i = index">
-      <div 
-        class="square" 
-        *ngFor="let letra of intento; let j = index" 
-        [ngClass]="estados[i][j]">
-        {{ letra }}
+    <div class="result" #result>
+      <p class="textResult" #textResult></p>
+      <p class="totalTime" #totalTime></p>
+      <div class="wordResult" #wordResult>
+        <p>{{word}}</p>
       </div>
+      <button class="restartButton" (click)="reiniciarPagina()">Reiniciar</button>
+    </div>
+    <div class="gameContent" #gameContent>
+      <h1>Guess The World</h1>
+      <p #time>Time: 0</p>
+      <div class="row" *ngFor="let intento of intentos; let i = index">
+        <div class="square" *ngFor="let letra of intento; let j = index" [ngClass]="estados[i][j]">
+          {{ letra }}
+        </div>
+      </div>
+      <p>Presiona las letras en el teclado para jugar.</p>
     </div>
   </div>
-  <p>Presiona las letras en el teclado para jugar.</p>
+
+
 </div>
